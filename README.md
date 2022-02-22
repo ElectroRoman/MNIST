@@ -1,1 +1,2 @@
 # MNIST
+Simple digital classification
