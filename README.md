@@ -1,2 +1,2 @@
 # MNIST
-Simple binary classification
+Simple binary classification using Pytorch and numpy 
