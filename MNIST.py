@@ -29,7 +29,6 @@ X_train = get_padding2d(X_train.reshape(60000,1,28,28)).float()
 y_train = y_train.long()
 
 
-
 ### Our Model
 class LeNet(nn.Module):
     def __init__(self):
@@ -52,8 +51,7 @@ class LeNet(nn.Module):
         x = self.relu(self.linear1(x))
         x = self.linear2(x)
         return x
-
-        
+    
 model = LeNet()
 
 ### Define loss and optimizer
@@ -107,4 +105,3 @@ outputs = model(X_test)
 predicted = torch.argmax(outputs, dim=1)
 accuracy = ((predicted==y_test).float().mean().item())*100
 print ("Accuracy:", accuracy,'Loss:',loss)
-
