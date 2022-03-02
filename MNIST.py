@@ -15,8 +15,6 @@ y_train = Mnist_train.targets
 X_test = Mnist_test.data
 y_test = Mnist_test.targets
 
-#len(X_test), len(y_test), len(X_train), len(y_train)
-
 def get_padding2d(input):
     padded_images = torch.nn.ConstantPad2d(2, 0)
     output = padded_images(input)
